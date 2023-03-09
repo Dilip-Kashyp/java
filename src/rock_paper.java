@@ -4,7 +4,7 @@ public class rock_paper {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
-        boolean result ;
+        int result=-1;
         int compt = rand.nextInt(4);
 
         if(compt == 0){
@@ -29,26 +29,35 @@ public class rock_paper {
         }
         else if (compt=='r'){
             if(player=='s') {
-                result = false;
+                result = 0;
             }
             else if(player=='p'){
-                result = true;
+                result = 1;
             }}
         else if (compt=='p'){
             if(player=='s') {
-                result = false;
+                result = 0;
             }
             else if(player=='r'){
-                result = true;
+                result = 1;
             }}
 
         else if (compt=='s'){
-            if(player=='p') {
-                result = false;
+            if(player=='r') {
+                result = 0;
             }
             else if(player=='p'){
-                result = true;
+                result = 1;
             }}
+        if(result==0){
+            System.out.println("you win");
+        }
+        else{
+            System.out.println("you losss");
+        }
+
+
+        System.out.println("computer = " + (char)compt);
 
 
 
